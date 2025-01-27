@@ -362,8 +362,8 @@ void checkCollisions() {
     for (int i = 0; i < 10; i++) {
         particles[i].x = playerX + playerSize / 2;
         particles[i].y = playerY + playerSize / 2;
-        particles[i].vx = random(-2, 3); // Горизонтальная скорость (-2 до 2)
-        particles[i].vy = random(-2, 3); // Вертикальная скорость (-2 до 2)
+        particles[i].vx = random(-2, 3); // горизонтальная скорость (-2 до 2)
+        particles[i].vy = random(-2, 3); // вертикальная скорость (-2 до 2)
         playShardSound();
     }
   }
@@ -493,15 +493,15 @@ void celebrateVictory() {
 
 void nextLevel() {
     level++;
-    showLevelMessage = true;  // Включаем показ сообщения уровня
-    levelStartTime = millis();  // Запоминаем текущее время
+    showLevelMessage = true;  // включаем показ сообщения уровня
+    levelStartTime = millis();  // запоминаем текущее время
 
     if (level > 3) {
         gameOver = true;
         return;
     }
 
-    // Увеличиваем сложность
+    // увеличиваем сложность
     angularVel1 *= 1.1;
     angularVel2 *= 1.1;
     mass1 += 0.5;
@@ -519,7 +519,7 @@ void updateLevelMessage() {
         arduboy.print(level);
         arduboy.display();
 
-        // Проверяем, прошло ли 2 секунды
+        // проверяем, прошло ли 2 секунды
         if (millis() - levelStartTime > 2000) {
             showLevelMessage = false;  // убираем сообщение уровня
         }
@@ -672,13 +672,13 @@ void drawMenu() {
   arduboy.print(F("MAIN MENU"));
 
   arduboy.setCursor(20, 20);
-  arduboy.print(menuOption == 0 ? "> Start" : "  Start");
+  arduboy.print(menuOption == 0 ? "> StartHaos" : "  StartHaos");
 
   arduboy.setCursor(20, 30);
   arduboy.print(menuOption == 1 ? "> Settings" : "  Settings");
 
   arduboy.setCursor(20, 40);
-  arduboy.print(menuOption == 2 ? "> High Scores" : "  High Scores");
+  arduboy.print(menuOption == 2 ? "> Scores" : "  Scores");
 }
 
 void handleMenuInput() {
