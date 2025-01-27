@@ -1,4 +1,5 @@
-DEVIL PENDULUM WORLD.
+DEVIL PENDULUM WORLD
+(for Arduboy/ArduboyFX/ArduGameHX)
 
 Immerse yourself in a world of chaos where two diabolical pendulums challenge the laws of physics and your survival skills. In this game, chaos rules everything, and your task is not just to survive, but also to prove that you are able to tame the devilish chaos!
 
